@@ -29,3 +29,7 @@ Route::get('/temperature/{temperature}', function($temperature){
   fwrite($file, date("H:i:s")." - ".$temperature."\n");
   fclose($file);
 });
+
+Route::get('/status', function(){
+  echo "OK";
+});
