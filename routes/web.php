@@ -28,5 +28,4 @@ Route::get('/temperature/{temperature}', function($temperature){
   $file = fopen('temperatura.txt','a');
   fwrite($file, date("H:i:s")." - ".$temperature."\n");
   fclose($file);
-  //Storage::disk('local')->put(temp.txt, $temperature);
 });
